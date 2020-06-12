@@ -1,0 +1,3 @@
+Concept:Has patient,Primary malignant neoplasm of lung,Carcinoma of lung,Malignant neoplasm of lung,Done (qualifier value),Do (activity),Negation,Smoke,Smoking,Tobacco smoke,Tobacco smoking behavior,Location characteristic ID - Smoking,Medical Device Emits Smoke,Month of May,consider,Pharmacotherapy,pharmacotherapeutic,Chemotherapy Regimen,Chemotherapy,part of,Treatment Plan,Mucinex,Mucinex,Acetaminophen,Acetaminophen,Acetaminophen Assay,
+Medication:"mucinex","paracetamol",
+SymptomDisease:lung cancer,

@@ -1,0 +1,189 @@
+drop database IHS;
+
+create database IHS;
+
+use IHS;
+
+create table hospital_info
+(
+hos_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+hos_name text not null,
+hos_phone text not null,
+hos_email text,
+hos_address text,
+hos_city text, 
+hos_state text, 
+hos_country text
+);
+
+
+create table designation
+(
+desg_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+desg_name text not null,
+desg_remark text
+);
+
+create table disease_info
+(
+dis_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+dis_name text not null, 
+dis_symptoms text not null,
+dis_remark text
+);
+
+create table medicine
+(
+med_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+med_name text not null,
+med_provider text not null, 
+med_salt text,
+med_remark text
+);
+
+create table patient_info
+(
+pat_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+pat_name text not null,
+pat_phone text not null,
+pat_email text,
+pat_address text,
+pat_city text, 
+pat_state text, 
+pat_country text, 
+pat_ssn varchar(16) not null
+);
+
+create table medical_staff
+(
+ms_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+ms_name text not null,
+ms_phone text not null, 
+ms_email text, 
+ms_address text,
+ms_city text,
+ms_state text,
+ms_country text, 
+ms_ssn_number varchar(16),
+ms_username text not null, 
+ms_password text not null,
+ms_desg_id int(11),
+ms_hos_id int(11) not null,
+
+INDEX ms_desg_id (ms_desg_id),
+INDEX ms_hos_id (ms_hos_id),
+
+    FOREIGN KEY (ms_desg_id)
+        REFERENCES designation(desg_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (ms_hos_id)
+        REFERENCES hospital_info(hos_id)
+        ON DELETE CASCADE
+
+);
+
+
+create table department
+(
+dept_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+dept_name text not null,
+dept_incharge_id int(11) not null,
+dept_remark text,
+INDEX dept_incharge_id (dept_incharge_id),
+    FOREIGN KEY (dept_incharge_id)
+        REFERENCES designation(desg_id)
+        ON DELETE CASCADE
+);
+
+
+create table patient_investigation
+(
+pe_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+pe_date text not null,
+pe_pat_id int(11) not null,
+pe_ms_id int(11) not null,
+INDEX pe_pat_id (pe_pat_id),
+INDEX pe_ms_id(pe_ms_id),
+    FOREIGN KEY (pe_pat_id)
+        REFERENCES patient_info(pat_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (pe_ms_id)
+        REFERENCES medical_staff(ms_id)
+        ON DELETE CASCADE
+
+);
+
+
+create table prescription_info
+(
+ps_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+ps_pe_id int(11) not null,
+ps_med_id int(11) not null,
+ps_remark text,
+INDEX ps_pe_id (ps_pe_id),
+INDEX ps_med_id(ps_med_id),
+    FOREIGN KEY (ps_pe_id)
+        REFERENCES patient_investigation(pe_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (ps_med_id)
+        REFERENCES medicine(med_id)
+        ON DELETE CASCADE
+
+
+);
+
+create table patient_history
+(
+ph_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+ph_pe_id int(11) not null,
+ph_dis_suggested text, 
+ph_dis_id_identified int(11),
+ph_remark text,
+INDEX ph_pe_id (ph_pe_id),
+INDEX ph_dis_id_identified(ph_dis_id_identified),
+    FOREIGN KEY (ph_pe_id)
+        REFERENCES patient_investigation(pe_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (ph_dis_id_identified)
+        REFERENCES disease_info(dis_id)
+        ON DELETE CASCADE
+
+);
+
+create table patient_Symptoms
+(
+sym_id int(11) NOT NULL AUTO_INCREMENT primary key, 
+sym_symptoms text not null, 
+sym_pe_id int(11) not null,
+INDEX sym_pe_id (sym_pe_id),
+    FOREIGN KEY (sym_pe_id)
+        REFERENCES patient_investigation(pe_id)
+        ON DELETE CASCADE
+);
+
+create table patient_test
+(
+pt_id int(11) NOT NULL AUTO_INCREMENT primary key,
+pt_name text not null,
+pt_pe_id int(11) not null,
+pt_report text,
+pt_remark text,
+INDEX pt_pe_id (pt_pe_id),
+    FOREIGN KEY (pt_pe_id)
+        REFERENCES patient_investigation(pe_id)
+        ON DELETE CASCADE
+);
+
+
+insert into hospital_info (hos_name, hos_phone, hos_email, hos_address, hos_city, hos_state, hos_country) values ("Hackovider hospital pvt ltd", "+91999999999", "hackovider@hackovider.com", "ABC, Aundh", "Pune", "Maharashtra", "India");
+insert into designation (desg_name) values ("CEO"),("Managing Director"),("Surgeon"),("Nurse");
+insert into disease_info (dis_name, dis_symptoms) values ("lung cancer","Has patient,Primary malignant neoplasm of lung,Carcinoma of lung,Malignant neoplasm of lung,Done (qualifier value),Do (activity),Negation,Smoke,Smoking,Tobacco smoke,Tobacco smoking behavior,Location characteristic ID - Smoking,Medical Device Emits Smoke,Month of May,consider,Pharmacotherapy,pharmacotherapeutic,Chemotherapy Regimen,Chemotherapy,part of,Treatment Plan,Mucinex,Mucinex,Acetaminophen,Acetaminophen,Acetaminophen Assay");
+insert into medicine (med_name, med_provider, med_salt) values ("mucinex","ABC pharmaceuticals","none"),("paracetamol","ABC pharmaceuticals","none");
+insert into patient_info (pat_name, pat_phone, pat_email, pat_ssn) values ("Alice","09326176376","test.alice@in.ibm.com","7719 9251 7210");
+insert into department (dept_name, dept_incharge_id) values ("Surgeon", 1);
+insert into medical_staff (ms_name, ms_phone, ms_email, ms_address, ms_city, ms_state, ms_country, ms_ssn_number, ms_username, ms_password, ms_desg_id, ms_hos_id) values ("Bob", "+91123456789", "bob.test@in.ibm.com","madhupushpa", "Pune", "Maharashtra", "India", 234567890, "bob", "password", 1, 1);
+insert into patient_investigation (pe_date, pe_pat_id, pe_ms_id) values("11-June-2020",1,1);
+insert into patient_history (ph_pe_id, ph_dis_suggested, ph_dis_id_identified) values (1, "malaria, typhoid", 1);

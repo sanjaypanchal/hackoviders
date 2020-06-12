@@ -1,0 +1,1 @@
+java -cp annotator-for-clinical-data-1.1.1.jar;core-6.9.3.jar;ibm-watson-8.5.0-jar-with-dependencies.jar;ibm-whcs-services-common-1.1.1.jar;IHS.jar;insights-for-medical-literature-1.1.1.jar IHSApp "Patient has lung cancer, but did not smoke. She may consider chemotherapy as part of a treatment plan. mucinex, paracetamol"

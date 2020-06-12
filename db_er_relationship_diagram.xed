@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?><Diagram version="1.0" type="MySQL" versionMajor="5" versionMinor="0" groupSchema="false" hide_inv="false">
+<Table id="0" name="department" schema="ihs" database="ihs" background="16777165">
+<Column id="1" name="dept_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="2" name="dept_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="3" name="dept_incharge_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="4" name="dept_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Table id="5" name="designation" schema="ihs" database="ihs" background="16777165">
+<Column id="6" name="desg_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="7" name="desg_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="8" name="desg_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Table id="9" name="disease_info" schema="ihs" database="ihs" background="16777165">
+<Column id="10" name="dis_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="11" name="dis_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="12" name="dis_symptoms" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="13" name="dis_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Table id="14" name="hospital_info" schema="ihs" database="ihs" background="16777165">
+<Column id="15" name="hos_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="16" name="hos_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="17" name="hos_phone" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="18" name="hos_email" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="19" name="hos_address" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="20" name="hos_city" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="21" name="hos_state" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="22" name="hos_country" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="23" name="hos_incharge_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+</Table>
+<Table id="24" name="medical_staff" schema="ihs" database="ihs" background="16777165">
+<Column id="25" name="ms_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="26" name="ms_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="27" name="ms_phone" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="28" name="ms_email" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="29" name="ms_address" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="30" name="ms_city" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="31" name="ms_state" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="32" name="ms_country" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="33" name="ms_ssn_number" type="int" length="0" nulls="true">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="34" name="ms_username" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="35" name="ms_password" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="36" name="ms_desg_id" type="int" length="0" nulls="true">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="37" name="ms_hos_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+</Table>
+<Table id="38" name="medicine" schema="ihs" database="ihs" background="16777165">
+<Column id="39" name="med_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="40" name="med_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="41" name="med_provider" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="42" name="med_salt" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="43" name="med_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Table id="44" name="patient_history" schema="ihs" database="ihs" background="16777165">
+<Column id="45" name="ph_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="46" name="ph_pe_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="47" name="ph_dis_suggested" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="48" name="ph_dis_id_identified" type="int" length="0" nulls="true">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="49" name="ph_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Table id="50" name="patient_info" schema="ihs" database="ihs" background="16777165">
+<Column id="51" name="pat_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="52" name="pat_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="53" name="pat_phone" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="54" name="pat_email" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="55" name="pat_address" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="56" name="pat_city" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="57" name="pat_state" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="58" name="pat_country" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="59" name="pat_ssn" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+</Table>
+<Table id="60" name="patient_investigation" schema="ihs" database="ihs" background="16777165">
+<Column id="61" name="pe_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="62" name="pe_date" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="63" name="pe_pat_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="64" name="pe_ms_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+</Table>
+<Table id="65" name="patient_symptoms" schema="ihs" database="ihs" background="16777165">
+<Column id="66" name="sym_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="67" name="sym_symptoms" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="68" name="sym_pe_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+</Table>
+<Table id="69" name="patient_test" schema="ihs" database="ihs" background="16777165">
+<Column id="70" name="pt_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="71" name="pt_name" type="text" length="0" nulls="false">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="72" name="pt_pe_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="73" name="pt_report" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+<Column id="74" name="pt_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Table id="75" name="prescription_info" schema="ihs" database="ihs" background="16777165">
+<Column id="76" name="ps_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">YES</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="77" name="ps_pe_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="78" name="ps_med_id" type="int" length="0" nulls="false">
+<CP name="PRECISION">11</CP>
+<CP name="IDENTITY">NO</CP>
+<CP name="UNSIGNED">NO</CP>
+<CP name="ZERO_FILL">NO</CP>
+</Column>
+<Column id="79" name="ps_remark" type="text" length="0" nulls="true">
+<CP name="COLLATION">utf8_general_ci</CP>
+<CP name="CHARSET">utf8</CP>
+</Column>
+</Table>
+<Relation id="80" name="department_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>6</FK>
+<PK>3</PK>
+</Relation>
+<Relation id="81" name="medical_staff_ibfk_2" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>15</FK>
+<PK>37</PK>
+</Relation>
+<Relation id="82" name="medical_staff_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE,"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>6</FK>
+<PK>36</PK>
+</Relation>
+<Relation id="83" name="patient_history_ibfk_2" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>10</FK>
+<PK>48</PK>
+</Relation>
+<Relation id="84" name="patient_history_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE,"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>61</FK>
+<PK>46</PK>
+</Relation>
+<Relation id="85" name="patient_investigation_ibfk_2" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>25</FK>
+<PK>64</PK>
+</Relation>
+<Relation id="86" name="patient_investigation_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE,"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>51</FK>
+<PK>63</PK>
+</Relation>
+<Relation id="87" name="patient_symptoms_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>61</FK>
+<PK>68</PK>
+</Relation>
+<Relation id="88" name="patient_test_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>61</FK>
+<PK>72</PK>
+</Relation>
+<Relation id="89" name="prescription_info_ibfk_2" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>39</FK>
+<PK>78</PK>
+</Relation>
+<Relation id="90" name="prescription_info_ibfk_1" cardinality="-2" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="CASCADE,"/>
+<Option name="onUpdate" class="String" value=""/>
+<FK>61</FK>
+<PK>77</PK>
+</Relation>
+<Index table="0" name="dept_incharge_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="3" sequence="0" ascending="true"/>
+</Index>
+<Index table="24" name="ms_hos_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="37" sequence="0" ascending="true"/>
+</Index>
+<Index table="24" name="ms_desg_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="36" sequence="0" ascending="true"/>
+</Index>
+<Index table="44" name="ph_dis_id_identified" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="48" sequence="0" ascending="true"/>
+</Index>
+<Index table="44" name="ph_pe_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="46" sequence="0" ascending="true"/>
+</Index>
+<Index table="60" name="pe_ms_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="64" sequence="0" ascending="true"/>
+</Index>
+<Index table="60" name="pe_pat_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="63" sequence="0" ascending="true"/>
+</Index>
+<Index table="65" name="sym_pe_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="68" sequence="0" ascending="true"/>
+</Index>
+<Index table="69" name="pt_pe_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="72" sequence="0" ascending="true"/>
+</Index>
+<Index table="75" name="ps_med_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="78" sequence="0" ascending="true"/>
+</Index>
+<Index table="75" name="ps_pe_id" schema="ihs" database="ihs">
+<Option name="type" class="String" value="BTREE"/>
+<IndexColumn id="77" sequence="0" ascending="true"/>
+</Index>
+<Constraint table="0" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="1"/>
+</Constraint>
+<Constraint table="5" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="6"/>
+</Constraint>
+<Constraint table="9" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="10"/>
+</Constraint>
+<Constraint table="14" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="15"/>
+</Constraint>
+<Constraint table="24" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="25"/>
+</Constraint>
+<Constraint table="38" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="39"/>
+</Constraint>
+<Constraint table="44" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="45"/>
+</Constraint>
+<Constraint table="50" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="51"/>
+</Constraint>
+<Constraint table="60" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="61"/>
+</Constraint>
+<Constraint table="65" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="66"/>
+</Constraint>
+<Constraint table="69" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="70"/>
+</Constraint>
+<Constraint table="75" name="PRIMARY" type="PrimKey">
+<ConstraintColumn id="76"/>
+</Constraint>
+<Sheet name="Untitled 1" id="91" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true"/>
+<Sheet name="Untitled 2" id="92" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="50" visible="true">520,468,130,180</Place>
+<Place id="65" visible="true">331,548,140,70</Place>
+<Place id="80" visible="true">500,0,0,0</Place>
+<Place id="85" visible="true" options="540.4573965201354,29.01354988502623,160.0,240.0,370.63477556868327,327.72776506552003,140.0,90.0,10,540.4573965201354,180.0,455.7286982600677,180.0,455.7286982600677,250.0,347.0,250.0,347.0,110.0,300.0,110.0,300.0,368.7418971823629,345.31738778434163,368.7418971823629,345.31738778434163,370.0,370.63477556868327,370.0">500,0,0,0</Place>
+<Place id="84" visible="true">500,0,0,0</Place>
+<Place id="87" visible="true">500,0,0,0</Place>
+<Place id="88" visible="true">500,0,0,0</Place>
+<Place id="90" visible="true">500,0,0,0</Place>
+<Place id="60" visible="true">370,327,140,90</Place>
+<Place id="82" visible="true">500,0,0,0</Place>
+<Place id="86" visible="true">500,0,0,0</Place>
+<Place id="0" visible="true">60,159,170,90</Place>
+<Place id="5" visible="true">290,17,130,70</Place>
+<Place id="75" visible="true">138,518,140,90</Place>
+<Place id="89" visible="true">500,0,0,0</Place>
+<Place id="24" visible="true">540,29,160,240</Place>
+<Place id="14" visible="true">860,38,160,180</Place>
+<Place id="38" visible="true">10,338,130,110</Place>
+<Place id="44" visible="true">841,499,180,110</Place>
+<Place id="83" visible="true">500,0,0,0</Place>
+<Place id="9" visible="true">980,248,130,90</Place>
+<Place id="69" visible="true">790,278,130,110</Place>
+<Place id="81" visible="true">500,0,0,0</Place>
+</Sheet>
+<Settings sheet="92" zoom="1.1212257706167694"/>
+</Diagram>
